@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satyam Kulshreshtha — Software Developer & Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of Satyam Kulshreshtha. Software Developer, Full-Stack Engineer, and MCA 2025 graduate specializing in Java, Python, React, and GenAI/RAG architectures.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.github.com https://ghchart.rshah.org;">
+  <meta name="theme-color" content="#070606">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Interactive Constellation Ambient Canvas -->
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Global Ambient Background Grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a href="#hero" class="brand" aria-label="satyam.dev developer portfolio">
+        <span class="brand-logo-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+            <rect x="2" y="2" width="24" height="24" rx="6" stroke="rgba(239, 233, 221, 0.2)" stroke-width="1.8" fill="rgba(255,255,255,0.03)"/>
+            <path d="M8 10L13 14L8 18" stroke="#4ade80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 18H20" stroke="#b49cff" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-name">satyam.dev</span>
+        <span class="brand-ver">// 2026</span>
+      </a>
+
+      <div class="status-badge" title="Actively interviewing for Software Engineering & Full-Stack roles">
+        <span class="pulse-dot"></span>
+        <span class="status-text">Available<span class="status-extra"> for SWE</span></span>
+      </div>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#works" class="nav-item"><span>01</span> Works</a>
+        <a href="#stack" class="nav-item"><span>02</span> Stack</a>
+        <a href="#experience" class="nav-item"><span>03</span> Experience</a>
+        <a href="#contact" class="nav-item"><span>04</span> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/Satyamkul" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/satyam-kulshreshtha-841049233/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn Profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="#contact" class="btn btn-sm btn-ghost">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section reveal-on-scroll">
+      <div class="wrap">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="mono-tag">SOFTWARE ENGINEER</span>
+            <span class="sep">/</span>
+            <span class="mono-tag">FULL-STACK DEVELOPER</span>
+            <span class="sep">/</span>
+            <span class="mono-tag highlight">MCA '25</span>
+          </div>
+
+          <h1 class="hero-title">
+            SATYAM KULSHRESHTHA
+          </h1>
+
+          <p class="hero-lead">
+            Building resilient, scalable web services and data-driven systems. Specializing in 
+            <em>Java</em>, <em>Python</em>, <em>React</em>, and <em>GenAI/RAG</em> pipelines with zero-bloat architecture.
+          </p>
+        </div>
+
+        <!-- Interactive Terminal Simulator Card -->
+        <div class="terminal-card" id="terminal-widget">
+          <div class="terminal-bar">
+            <div class="window-controls" aria-hidden="true">
+              <span class="dot close"></span>
+              <span class="dot min"></span>
+              <span class="dot max"></span>
+            </div>
+            <div class="terminal-title">satyam@portfolio: ~</div>
+            <div class="token-frequency-wave" title="Real-time Inference Activity" aria-hidden="true">
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+              <span class="wave-bar"></span>
+            </div>
+            <button class="terminal-copy-btn" id="copy-cmd-btn" title="Copy command to clipboard">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>copy</span>
+            </button>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line input-line">
+              <span class="term-prompt">satyam@portfolio:~$</span>
+              <span class="term-cmd-wrap">
+                <span class="term-cmd" id="term-active-cmd">satyam --summary</span><span class="term-cursor" aria-hidden="true">█</span>
+              </span>
+            </div>
+            <div class="terminal-output" id="term-output">
+              <div class="out-row"><span class="out-k">Name:</span> <span class="out-v">Satyam Kulshreshtha</span></div>
+              <div class="out-row"><span class="out-k">Current Role:</span> <span class="out-v holo-text">Software Engineer @ DBN Management Services Pvt Ltd</span></div>
+              <div class="out-row"><span class="out-k">Focus:</span> <span class="out-v">Enterprise ERP Software Architecture &bull; Java &bull; XML Layouts</span></div>
+              <div class="out-row"><span class="out-k">Degree:</span> <span class="out-v">MCA (AKGEC, Ghaziabad / AKTU '25) &bull; BCA (MAISM / UniRaj)</span></div>
+              <div class="out-row"><span class="out-k">Past Internships:</span> <span class="out-v">Front-End Intern @ CSRBOX (IBM) &bull; Java Intern @ JPMorgan Chase</span></div>
+              <div class="out-row"><span class="out-k">Core Tech:</span> <span class="out-tags"><span class="t-pill">Java</span><span class="t-pill">Python</span><span class="t-pill">React</span><span class="t-pill">XML</span><span class="t-pill">RAG</span><span class="t-pill">SQL</span></span></div>
+            </div>
+            <!-- Quick command triggers -->
+            <div class="term-triggers">
+              <span class="trigger-label">Try commands:</span>
+              <button class="term-pill-btn active" data-cmd="satyam --summary">--summary</button>
+              <button class="term-pill-btn" data-cmd="satyam --skills">--skills</button>
+              <button class="term-pill-btn" data-cmd="satyam --projects">--projects</button>
+              <button class="term-pill-btn" data-cmd="curl satyam.dev/contact">curl contact</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#works" class="btn btn-primary">
+            <span>Explore Works</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <a href="mailto:kulsatyam2002@gmail.com" class="btn btn-secondary">
+            <span>kulsatyam2002@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01 // Selected Works (Split-Pane Inspector) -->
+    <section id="works" class="section reveal-on-scroll">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="section-num">01</div>
+          <div class="section-info">
+            <span class="section-eyebrow">PORTFOLIO & PRODUCTION REPOSITORIES</span>
+            <h2 class="section-title">Selected Works <em>& Architectures</em></h2>
+          </div>
+        </div>
+
+        <!-- Split-Pane Interactive Inspector -->
+        <div class="inspector-grid">
+          <!-- Left: Project Selector List -->
+          <div class="project-selector-list" role="tablist" aria-label="Featured Projects">
+            <button class="project-tab active" role="tab" aria-selected="true" data-project="chat-pdf" id="tab-chat-pdf">
+              <div class="tab-meta">
+                <span class="p-num">01</span>
+                <span class="p-tag holo-pill">GenAI / RAG</span>
+              </div>
+              <h3 class="tab-title">Chat-with-PDF</h3>
+              <p class="tab-blurb">Document QA engine powered by vector embeddings and LLM context synthesis.</p>
+              <div class="tab-foot">
+                <span class="tab-lang">Python • LangChain • ChromaDB</span>
+                <span class="tab-arrow">→</span>
+              </div>
+            </button>
+
+            <button class="project-tab" role="tab" aria-selected="false" data-project="hotel-booking" id="tab-hotel-booking">
+              <div class="tab-meta">
+                <span class="p-num">02</span>
+                <span class="p-tag">Full-Stack</span>
+              </div>
+              <h3 class="tab-title">Hotel Booking Engine</h3>
+              <p class="tab-blurb">End-to-end hospitality booking engine with availability scheduling & checkout flow.</p>
+              <div class="tab-foot">
+                <span class="tab-lang">React • Node.js • Express • SQL</span>
+                <span class="tab-arrow">→</span>
+              </div>
+            </button>
+
+            <button class="project-tab" role="tab" aria-selected="false" data-project="intelliconnect" id="tab-intelliconnect">
+              <div class="tab-meta">
+                <span class="p-num">03</span>
+                <span class="p-tag">Platform</span>
+              </div>
+              <h3 class="tab-title">IntelliConnect Portal</h3>
+              <p class="tab-blurb">Collaborative academic & developer community networking platform.</p>
+              <div class="tab-foot">
+                <span class="tab-lang">JavaScript • WebSockets • MongoDB</span>
+                <span class="tab-arrow">→</span>
+              </div>
+            </button>
+
+            <button class="project-tab" role="tab" aria-selected="false" data-project="greenfair" id="tab-greenfair">
+              <div class="tab-meta">
+                <span class="p-num">04</span>
+                <span class="p-tag">E-Commerce</span>
+              </div>
+              <h3 class="tab-title">GreenFair Marketplace</h3>
+              <p class="tab-blurb">Sustainable commerce marketplace promoting verified eco-conscious products.</p>
+              <div class="tab-foot">
+                <span class="tab-lang">HTML5 • Modern CSS • JavaScript</span>
+                <span class="tab-arrow">→</span>
+              </div>
+            </button>
+
+            <button class="project-tab" role="tab" aria-selected="false" data-project="digital-services" id="tab-digital-services">
+              <div class="tab-meta">
+                <span class="p-num">05</span>
+                <span class="p-tag">SaaS / Web</span>
+              </div>
+              <h3 class="tab-title">DigitalServices Pro</h3>
+              <p class="tab-blurb">Agency operations hub and service catalog with automated inquiry routing.</p>
+              <div class="tab-foot">
+                <span class="tab-lang">Full-Stack Web Suite</span>
+                <span class="tab-arrow">→</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- Right: Dynamic Inspector Detail View -->
+          <div class="inspector-viewer" id="inspector-viewer" role="tabpanel" aria-labelledby="tab-chat-pdf">
+            <div class="viewer-window">
+              <div class="viewer-header">
+                <div class="viewer-title-box">
+                  <span class="viewer-crumb">PROJECT // ARCHITECTURAL INSPECTOR</span>
+                  <h4 class="viewer-headline" id="v-title">Chat-with-PDF</h4>
+                </div>
+                <div class="viewer-badge holo-badge" id="v-category">GenAI / RAG Architecture</div>
+              </div>
+
+              <!-- Architecture Diagram Box with Live Graphic Motion Pipeline -->
+              <div class="arch-preview-box">
+                <div class="arch-code-bar">
+                  <div class="arch-mode-toggles">
+                    <button type="button" class="arch-mode-btn active" id="btn-mode-motion">
+                      <span class="mode-pulse-dot"></span>
+                      <span>KINETIC PIPELINE</span>
+                    </button>
+                    <button type="button" class="arch-mode-btn" id="btn-mode-ascii">
+                      <span>ASCII SPEC</span>
+                    </button>
+                  </div>
+                  <span class="arch-file-label" id="v-arch-label">rag_ingestion_pipeline.py</span>
+                  <span class="arch-status" id="arch-stream-status"><span class="pulse-dot"></span> LIVE PACKET STREAM</span>
+                </div>
+
+                <!-- Graphic Motion Pipeline Canvas -->
+                <div class="pipeline-motion-wrap" id="pipeline-motion-wrap">
+                  <canvas id="pipeline-canvas" class="pipeline-canvas" width="640" height="175"></canvas>
+                </div>
+
+                <!-- Raw ASCII Diagram Spec (Toggleable) -->
+                <pre class="arch-flow" id="v-flow" style="display: none;">
+[User Query] ────────► [Embedding Model] ───► [Vector Search]
+                                                    │
+[PDF Ingestion] ─────► [Text Chunking] ──────► [ChromaDB]
+                                                    │
+[Augmented Prompt] ◄── [Top-K Context Retrieval] ───┘
+        │
+        ▼
+[LLM Inference] ─────► [Streamed Synthesis Answer + Source Citations]
+                </pre>
+              </div>
+
+              <div class="viewer-content">
+                <div class="content-block">
+                  <h5 class="content-heading">THE PROBLEM & ARCHITECTURE</h5>
+                  <p class="content-desc" id="v-desc">
+                    Standard LLM querying suffers from strict context limits and hallucination when dealing with lengthy documents. 
+                    This system implements an asynchronous ingestion pipeline that splits multi-page PDFs into semantic overlapping chunks,
+                    computes high-dimensional vector embeddings, and executes low-latency cosine similarity queries to ground generation in exact factual source passages.
+                  </p>
+                </div>
+
+                <div class="content-block">
+                  <h5 class="content-heading">TECHNOLOGY STACK</h5>
+                  <div class="tech-pills" id="v-stack">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">LangChain</span>
+                    <span class="tech-pill">ChromaDB</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">OpenAI / Gemini Embeddings</span>
+                    <span class="tech-pill">Streamlit / React</span>
+                  </div>
+                </div>
+
+                <div class="viewer-footer">
+                  <a href="https://github.com/Satyamkul/Chat-with-PDF" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" id="v-github">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>Inspect Repository</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </a>
+                  <a href="https://github.com/Satyamkul" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost" id="v-demo">
+                    <span>Source Code Hub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub Stats & 52-Week Contribution Activity -->
+        <div class="github-activity-card">
+            <div class="gh-card-header">
+              <div class="gh-header-left">
+                <div class="gh-live-badge">
+                  <span class="pulse-dot"></span>
+                  <span>LIVE GITHUB SYNC</span>
+                </div>
+                <h3 class="gh-heading">Contribution Heatmap <em>& Codebase Metrics</em></h3>
+                <p class="gh-subhead">Live 52-week contribution graph and real-time open-source cadence synced directly from <a href="https://github.com/Satyamkul" target="_blank" rel="noopener noreferrer" class="gh-user-link">@Satyamkul</a> on GitHub.</p>
+              </div>
+              <div class="gh-header-right">
+                <button type="button" class="btn btn-secondary btn-sm" id="gh-sync-btn" title="Re-fetch live GitHub data">
+                  <svg class="sync-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/></svg>
+                  <span>Sync Now</span>
+                </button>
+                <a href="https://github.com/Satyamkul" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <span>View @Satyamkul</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Top Stats Metrics Row -->
+            <div class="gh-stats-grid">
+              <div class="gh-stat-box">
+                <span class="gh-stat-num" id="gh-stat-repos">28</span>
+                <span class="gh-stat-label">Public Repositories</span>
+              </div>
+              <div class="gh-stat-box">
+                <span class="gh-stat-num" id="gh-stat-contributions">200+</span>
+                <span class="gh-stat-label">Total Contributions</span>
+              </div>
+              <div class="gh-stat-box">
+                <span class="gh-stat-num" id="gh-stat-followers">16</span>
+                <span class="gh-stat-label">GitHub Followers</span>
+              </div>
+              <div class="gh-stat-box">
+                <span class="gh-stat-num" id="gh-stat-sync">LIVE</span>
+                <span class="gh-stat-label">Real-time Auto Sync</span>
+              </div>
+            </div>
+
+            <!-- 52-Week Contribution Graph Viewport -->
+            <div class="gh-graph-container">
+              <div class="gh-graph-header">
+                <div class="gh-graph-title-wrap">
+                  <span class="gh-graph-title">52-Week Contribution Activity</span>
+                  <span class="gh-sync-indicator" id="gh-sync-status"><span class="pulse-dot"></span> LIVE SYNCED</span>
+                </div>
+                <div class="gh-legend" aria-hidden="true">
+                  <span>Less</span>
+                  <span class="legend-box" style="background:rgba(255, 255, 255, 0.08)"></span>
+                  <span class="legend-box" style="background:#553c9a"></span>
+                  <span class="legend-box" style="background:#805ad5"></span>
+                  <span class="legend-box" style="background:#b49cff"></span>
+                  <span>More</span>
+                </div>
+              </div>
+
+              <div class="gh-svg-scroll-wrap" id="gh-scroll-wrapper">
+                <img id="gh-live-chart" src="https://ghchart.rshah.org/b49cff/Satyamkul" alt="Satyam Kulshreshtha's Live GitHub Contribution Activity Graph" class="gh-contrib-img gh-live-svg" loading="lazy" width="663" height="104">
+              </div>
+            </div>
+
+            <!-- Featured Repository Highlights -->
+            <div class="gh-repos-row">
+              <span class="gh-repos-label">Featured Repos:</span>
+              <div class="gh-repo-pills">
+                <a href="https://github.com/Satyamkul/Chat-with-PDF" target="_blank" rel="noopener noreferrer" class="gh-repo-pill">
+                  <span class="repo-lang-dot python"></span>
+                  <span class="repo-name">Chat-with-PDF</span>
+                  <span class="repo-desc">LangChain • RAG</span>
+                </a>
+                <a href="https://github.com/Satyamkul/hotel-booking-website" target="_blank" rel="noopener noreferrer" class="gh-repo-pill">
+                  <span class="repo-lang-dot react"></span>
+                  <span class="repo-name">hotel-booking-website</span>
+                  <span class="repo-desc">Full-Stack React</span>
+                </a>
+                <a href="https://github.com/Satyamkul/IntelliConnect-A-Community-Portal-master" target="_blank" rel="noopener noreferrer" class="gh-repo-pill">
+                  <span class="repo-lang-dot js"></span>
+                  <span class="repo-name">IntelliConnect</span>
+                  <span class="repo-desc">Node • WebSockets</span>
+                </a>
+                <a href="https://github.com/Satyamkul/GreenFair" target="_blank" rel="noopener noreferrer" class="gh-repo-pill">
+                  <span class="repo-lang-dot html"></span>
+                  <span class="repo-name">GreenFair</span>
+                  <span class="repo-desc">E-Commerce</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Section 02 // Tech Stack Matrix -->
+    <section id="stack" class="section reveal-on-scroll">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="section-num">02</div>
+          <div class="section-info">
+            <span class="section-eyebrow">LANGUAGES, FRAMEWORKS & RUNTIMES</span>
+            <h2 class="section-title">Technical <em>Stack Matrix</em></h2>
+          </div>
+        </div>
+
+        <div class="matrix-grid">
+          <!-- Card 1: Core Languages -->
+          <div class="matrix-card">
+            <div class="card-top">
+              <span class="card-icon">01</span>
+              <h3 class="card-cat">Languages & Core</h3>
+            </div>
+            <ul class="stack-list">
+              <li>
+                <span class="s-name">Java</span>
+                <span class="s-detail">OOP, Collections, Multi-threading, JVM</span>
+              </li>
+              <li>
+                <span class="s-name">Python</span>
+                <span class="s-detail">Data structures, Automation, LangChain, API scripting</span>
+              </li>
+              <li>
+                <span class="s-name">C++ & C</span>
+                <span class="s-detail">Algorithms, Memory management, Computational logic</span>
+              </li>
+              <li>
+                <span class="s-name">JavaScript (ES2024+)</span>
+                <span class="s-detail">Async/Await, DOM, Event-driven architecture</span>
+              </li>
+              <li>
+                <span class="s-name">SQL</span>
+                <span class="s-detail">Relational schema design, Joins, Query optimization</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Web & Full-Stack -->
+          <div class="matrix-card">
+            <div class="card-top">
+              <span class="card-icon">02</span>
+              <h3 class="card-cat">Full-Stack & Web</h3>
+            </div>
+            <ul class="stack-list">
+              <li>
+                <span class="s-name">React</span>
+                <span class="s-detail">Hooks, Component lifecycles, State architecture</span>
+              </li>
+              <li>
+                <span class="s-name">Node.js & Express</span>
+                <span class="s-detail">RESTful API routing, Middleware, Auth</span>
+              </li>
+              <li>
+                <span class="s-name">Modern CSS3</span>
+                <span class="s-detail">CSS Grid, Subgrid, Container Queries, Variables</span>
+              </li>
+              <li>
+                <span class="s-name">HTML5 Semantic</span>
+                <span class="s-detail">Accessibility (a11y), Native forms, Dialogs</span>
+              </li>
+              <li>
+                <span class="s-name">Responsive Design</span>
+                <span class="s-detail">Mobile-first layouts, Fluid clamp scaling</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: AI & Data Science -->
+          <div class="matrix-card">
+            <div class="card-top">
+              <span class="card-icon">03</span>
+              <h3 class="card-cat">AI & Data Engineering</h3>
+            </div>
+            <ul class="stack-list">
+              <li>
+                <span class="s-name">RAG Architectures</span>
+                <span class="s-detail">Chunking, Embeddings, Context window tuning</span>
+              </li>
+              <li>
+                <span class="s-name">LangChain</span>
+                <span class="s-detail">Chains, Prompt templates, Document loaders</span>
+              </li>
+              <li>
+                <span class="s-name">Vector Search</span>
+                <span class="s-detail">ChromaDB, Similarity indexing, Top-K recall</span>
+              </li>
+              <li>
+                <span class="s-name">Data Processing</span>
+                <span class="s-detail">Pandas, NumPy, Pattern recognition</span>
+              </li>
+              <li>
+                <span class="s-name">Prompt Engineering</span>
+                <span class="s-detail">Few-shot prompting, Schema enforcement</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4: Tools & Workflow -->
+          <div class="matrix-card">
+            <div class="card-top">
+              <span class="card-icon">04</span>
+              <h3 class="card-cat">Tools & Ecosystem</h3>
+            </div>
+            <ul class="stack-list">
+              <li>
+                <span class="s-name">Git & GitHub</span>
+                <span class="s-detail">Branching strategies, CI/CD actions, PR workflows</span>
+              </li>
+              <li>
+                <span class="s-name">Postman & APIs</span>
+                <span class="s-detail">Endpoint verification, Payload validation</span>
+              </li>
+              <li>
+                <span class="s-name">Linux / CLI</span>
+                <span class="s-detail">Bash scripting, Environment variables, Tooling</span>
+              </li>
+              <li>
+                <span class="s-name">Deployment</span>
+                <span class="s-detail">Netlify, Vercel, Local daemon setups</span>
+              </li>
+              <li>
+                <span class="s-name">IDEs & Agent Tools</span>
+                <span class="s-detail">Antigravity IDE, VS Code, Cursor</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 03 // Experience & Academic Milestones -->
+    <section id="experience" class="section reveal-on-scroll">
+      <div class="wrap">
+        <span id="education" style="position: absolute; top: 0;" aria-hidden="true"></span>
+        <div class="section-header">
+          <div class="section-num">03</div>
+          <div class="section-info">
+            <span class="section-eyebrow">CAREER &amp; ACADEMICS</span>
+            <h2 class="section-title">Experience <em>&amp; Education</em></h2>
+          </div>
+        </div>
+
+        <!-- Verified Developer Profile Card -->
+        <div class="bio-credential-card">
+          <div class="bio-card-left">
+            <div class="bio-avatar-wrap">
+              <img src="satyam_profile.jpg" alt="Satyam Kulshreshtha" class="bio-avatar-img" width="68" height="68">
+              <span class="bio-status-dot" title="Active & Available for Roles"></span>
+            </div>
+            <div class="bio-headline-wrap">
+              <div class="bio-name-row">
+                <h3 class="bio-name">Satyam Kulshreshtha</h3>
+                <span class="bio-badge holo-pill">VERIFIED DEVELOPER</span>
+              </div>
+              <p class="bio-role">Software Engineer at DBN Management Services &bull; Full-Stack Developer &bull; MCA '25</p>
+              <div class="bio-meta-row">
+                <span class="bio-meta-item">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Gurugram, Haryana (On-site) &bull; Delhi-NCR / Jaipur, India
+                </span>
+                <span class="bio-meta-sep">&bull;</span>
+                <span class="bio-meta-item">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  Active Full-Time Engineer
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="bio-card-right">
+            <a href="https://www.linkedin.com/in/satyam-kulshreshtha-841049233/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>Connect on LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Category 1: Professional Experience & Internships -->
+          <div class="timeline-category-tag">
+            <span>// PROFESSIONAL EXPERIENCE &amp; CURRENT ROLES</span>
+          </div>
+
+          <!-- Experience 0 (Current): DBN MANAGEMENT SERVICES -->
+          <div class="timeline-row current-role-row">
+            <div class="t-year-col">
+              <div class="t-logo-wrap current-glow" title="DBN MANAGEMENT SERVICES PRIVATE LIMITED">
+                <img src="logo-dbn.svg" alt="DBN Logo" class="t-logo-img" width="36" height="36" loading="lazy">
+              </div>
+              <div class="t-year">Apr 2026 — Present</div>
+            </div>
+            <div class="t-content">
+              <div class="t-head">
+                <h3 class="t-degree">Software Engineer</h3>
+                <span class="t-status holo-pill current-pill"><span class="pulse-dot"></span> Current Role &bull; Full-time</span>
+              </div>
+              <div class="t-inst">
+                <strong>DBN MANAGEMENT SERVICES PRIVATE LIMITED</strong>
+              </div>
+              <div class="t-affil">
+                Gurugram, Haryana, India &bull; On-site &bull; ERP Architecture
+              </div>
+              <p class="t-desc">
+                Developing an end-to-end ERP software system, owning both the user interface (XML-based layouts) and core business backend logic in Java. Engineering modular data management flows, secure workflow modules, and enterprise service integration.
+              </p>
+
+              <!-- Official Workplace Attachment from LinkedIn -->
+              <div class="t-media-card">
+                <div class="t-media-thumb-wrap">
+                  <img src="dbn_office.png" alt="DBN Management Services Corporate Office" class="t-media-thumb" loading="lazy" width="108" height="56">
+                </div>
+                <div class="t-media-meta">
+                  <span class="t-media-tag">WORKPLACE &bull; GURUGRAM</span>
+                  <span class="t-media-caption">DBN Management Services Corporate Office</span>
+                </div>
+              </div>
+
+              <!-- Skills tags from LinkedIn -->
+              <div class="t-skills-row">
+                <span class="t-skill-pill">Software Development</span>
+                <span class="t-skill-pill">Java</span>
+                <span class="t-skill-pill">XML Layouts</span>
+                <span class="t-skill-pill">ERP Software</span>
+                <span class="t-skill-pill">Enterprise Logic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 1: CSRBOX / IBM -->
+          <div class="timeline-row">
+            <div class="t-year-col">
+              <div class="t-logo-wrap" title="IBM SkillsBuild / CSRBOX">
+                <img src="logo-ibm.svg" alt="IBM Logo" class="t-logo-img" width="36" height="36" loading="lazy">
+              </div>
+              <div class="t-year">2024</div>
+            </div>
+            <div class="t-content">
+              <div class="t-head">
+                <h3 class="t-degree">Front-End Web Developer Intern</h3>
+                <span class="t-status holo-pill">Internship</span>
+              </div>
+              <div class="t-inst">
+                <strong>CSRBOX</strong> (in collaboration with <strong>IBM SkillsBuild</strong>)
+              </div>
+              <div class="t-affil">
+                HTML5 &bull; CSS3 &bull; JavaScript &bull; Bootstrap &bull; Responsive Web Applications
+              </div>
+              <p class="t-desc">
+                Engineered and launched responsive sustainability web applications. Implemented accessible, cross-browser user interfaces, optimized page performance, and enhanced digital user engagement workflows under IBM SkillsBuild mentorship.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience 2: JPMorgan Chase -->
+          <div class="timeline-row">
+            <div class="t-year-col">
+              <div class="t-logo-wrap" title="JPMorgan Chase & Co.">
+                <img src="logo-jpmorgan.svg" alt="JPMorgan Chase Logo" class="t-logo-img" width="36" height="36" loading="lazy">
+              </div>
+              <div class="t-year">2024</div>
+            </div>
+            <div class="t-content">
+              <div class="t-head">
+                <h3 class="t-degree">Java Developer Intern</h3>
+                <span class="t-status holo-pill">Virtual Experience</span>
+              </div>
+              <div class="t-inst">
+                <strong>JPMorgan Chase &amp; Co.</strong> (via Forage)
+              </div>
+              <div class="t-affil">
+                Java &bull; JDBC &bull; JUnit &bull; OOP Architecture &bull; Financial Data Feeds
+              </div>
+              <p class="t-desc">
+                Engineered backend interface modules for financial data streaming. Authored comprehensive JUnit unit test suites to eliminate critical runtime parsing exceptions and ensure high transaction reliability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Category 2: Academic Foundation -->
+          <div class="timeline-category-tag">
+            <span>// ACADEMIC FOUNDATION</span>
+          </div>
+
+          <!-- Education 1: MCA -->
+          <div class="timeline-row">
+            <div class="t-year-col">
+              <div class="t-logo-wrap" title="AKGEC Ghaziabad">
+                <img src="logo-akgec.jpg" alt="AKGEC Logo" class="t-logo-img" width="36" height="36" loading="lazy">
+              </div>
+              <div class="t-year">2023 — 2025</div>
+            </div>
+            <div class="t-content">
+              <div class="t-head">
+                <h3 class="t-degree">Master of Computer Applications (MCA)</h3>
+                <span class="t-status holo-pill">Postgraduate Degree</span>
+              </div>
+              <div class="t-inst">
+                <strong>Ajay Kumar Garg Engineering College (AKGEC)</strong>, Ghaziabad
+              </div>
+              <div class="t-affil">
+                Affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow
+              </div>
+              <p class="t-desc">
+                Rigorous graduate coursework focusing on advanced algorithms, distributed database systems, full-stack software development,
+                cloud architectures, and artificial intelligence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education 2: BCA -->
+          <div class="timeline-row">
+            <div class="t-year-col">
+              <div class="t-logo-wrap" title="University of Rajasthan / MAISM">
+                <img src="logo-uniraj.png" alt="University of Rajasthan Logo" class="t-logo-img" width="36" height="36" loading="lazy">
+              </div>
+              <div class="t-year">2020 — 2023</div>
+            </div>
+            <div class="t-content">
+              <div class="t-head">
+                <h3 class="t-degree">Bachelor of Computer Applications (BCA)</h3>
+                <span class="t-status">Undergraduate Degree</span>
+              </div>
+              <div class="t-inst">
+                <strong>Maharishi Arvind Institute of Science &amp; Management (MAISM)</strong>, Jaipur
+              </div>
+              <div class="t-affil">
+                University of Rajasthan, Jaipur
+              </div>
+              <p class="t-desc">
+                Core grounding in computer science theory, Object-Oriented Programming (Java/C++), data structures, operating systems, 
+                relational databases, and clientside web foundations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education 3: School -->
+          <div class="timeline-row">
+            <div class="t-year-col">
+              <div class="t-logo-wrap" title="New Bright Future Academy / Board of Secondary Education Rajasthan">
+                <img src="logo-uniraj.png" alt="Academic Emblem" class="t-logo-img" width="36" height="36" loading="lazy">
+              </div>
+              <div class="t-year">2018 — 2020</div>
+            </div>
+            <div class="t-content">
+              <div class="t-head">
+                <h3 class="t-degree">Senior Secondary School // Science (PCM)</h3>
+                <span class="t-status">High School</span>
+              </div>
+              <div class="t-inst">
+                <strong>New Bright Future Academy Sr. Sec. School</strong> | RBSE
+              </div>
+              <div class="t-affil">
+                Jaipur, Rajasthan
+              </div>
+              <p class="t-desc">
+                Physics, Chemistry, and Advanced Mathematics background providing quantitative foundation and analytical problem-solving skills.
+              </p>
+            </div>
+          </div>
+
+          <!-- Category 3: Honors & Competitive Milestones -->
+          <div class="timeline-category-tag">
+            <span>// HONORS &amp; COMPETITIVE MILESTONES</span>
+          </div>
+
+          <!-- Milestone 1: Kaggle -->
+          <div class="timeline-row">
+            <div class="t-year-col">
+              <div class="t-logo-wrap" title="Kaggle Machine Learning Challenge">
+                <img src="logo-kaggle.svg" alt="Kaggle Logo" class="t-logo-img" width="36" height="36" loading="lazy">
+              </div>
+              <div class="t-year">2025</div>
+            </div>
+            <div class="t-content">
+              <div class="t-head">
+                <h3 class="t-degree">Celebal Technologies Kaggle ML Challenge</h3>
+                <span class="t-status holo-pill">Top 27 / 500+</span>
+              </div>
+              <div class="t-inst">
+                <strong>Ranked Top 27 out of 500+ Participants</strong> (Validation Score: 0.775)
+              </div>
+              <div class="t-affil">
+                Machine Learning &bull; Feature Engineering &bull; Predictive Modeling &bull; Scikit-Learn
+              </div>
+              <p class="t-desc">
+                Architected predictive regression and classification pipelines on competitive Kaggle benchmark datasets with high cross-validation stability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2: Google Cloud -->
+          <div class="timeline-row">
+            <div class="t-year-col">
+              <div class="t-logo-wrap" title="Google Cloud Platform">
+                <img src="logo-googlecloud.svg" alt="Google Cloud Logo" class="t-logo-img" width="36" height="36" loading="lazy">
+              </div>
+              <div class="t-year">2024</div>
+            </div>
+            <div class="t-content">
+              <div class="t-head">
+                <h3 class="t-degree">Google Cloud Arcade Challenge</h3>
+                <span class="t-status holo-pill">Top 10 Global</span>
+              </div>
+              <div class="t-inst">
+                <strong>Achieved Top 10 Global Rank on Leaderboard</strong>
+              </div>
+              <div class="t-affil">
+                Google Cloud Platform &bull; Cloud Infrastructure &bull; Kubernetes &bull; IAM
+              </div>
+              <p class="t-desc">
+                Demonstrated hands-on proficiency in deploying containerized microservices, configuring cloud security parameters, and executing real-world Google Cloud architecture challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 04 // Direct Contact Hub -->
+    <section id="contact" class="section reveal-on-scroll">
+      <div class="wrap">
+        <div class="section-header">
+          <div class="section-num">04</div>
+          <div class="section-info">
+            <span class="section-eyebrow">COMMUNICATION &amp; INQUIRIES</span>
+            <h2 class="section-title">Direct <em>Channels</em></h2>
+          </div>
+        </div>
+
+        <div class="contact-hub-wrapper">
+          <div class="contact-lead-box">
+            <h3 class="contact-lead">Let's build something exceptional together.</h3>
+            <p class="contact-sub">
+              Available for full-time Software Engineering roles, Full-Stack engineering, and GenAI/RAG architectures.
+              Reach out directly across verified phone, email, or LinkedIn channels.
+            </p>
+          </div>
+
+          <div class="direct-channels-grid">
+            <!-- 1. Direct Email Card -->
+            <div class="channel-card">
+              <div class="channel-card-top">
+                <div class="channel-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <span class="ch-badge holo-pill">Primary</span>
+              </div>
+              <div class="channel-meta">
+                <span class="ch-label">DIRECT EMAIL</span>
+                <a href="mailto:kulsatyam2002@gmail.com" class="ch-value">kulsatyam2002@gmail.com</a>
+                <span class="ch-hint">Typical response within 12–24 hours</span>
+              </div>
+              <div class="channel-actions">
+                <a href="mailto:kulsatyam2002@gmail.com" class="btn btn-primary btn-sm">
+                  <span>Send Email</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <button type="button" class="copy-small-btn" data-copy="kulsatyam2002@gmail.com" title="Copy email address">copy</button>
+              </div>
+            </div>
+
+            <!-- 2. Phone / WhatsApp Card -->
+            <div class="channel-card">
+              <div class="channel-card-top">
+                <div class="channel-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <span class="ch-badge">Direct Line</span>
+              </div>
+              <div class="channel-meta">
+                <span class="ch-label">PHONE &amp; WHATSAPP</span>
+                <a href="tel:+916377488794" class="ch-value">+91 6377488794</a>
+                <span class="ch-hint">Voice calls &amp; WhatsApp instant messaging</span>
+              </div>
+              <div class="channel-actions">
+                <a href="tel:+916377488794" class="btn btn-secondary btn-sm">
+                  <span>Call / Text</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <button type="button" class="copy-small-btn" data-copy="+916377488794" title="Copy phone number">copy</button>
+              </div>
+            </div>
+
+            <!-- 3. LinkedIn Profile Card -->
+            <div class="channel-card">
+              <div class="channel-card-top">
+                <div class="channel-icon-wrap" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <span class="ch-badge">Network</span>
+              </div>
+              <div class="channel-meta">
+                <span class="ch-label">LINKEDIN PROFILE</span>
+                <a href="https://www.linkedin.com/in/satyam-kulshreshtha-841049233/" target="_blank" rel="noopener noreferrer" class="ch-value">satyam-kulshreshtha-841049233</a>
+                <span class="ch-hint">Recommendations, credentials &amp; background</span>
+              </div>
+              <div class="channel-actions">
+                <a href="https://www.linkedin.com/in/satyam-kulshreshtha-841049233/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  <span>Connect</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-wrap">
+      <div class="f-left">
+        <span class="f-brand">satyam.dev</span>
+        <span class="f-meta">© 2026 Satyam Kulshreshtha. Designed &amp; Engineered with Native Web Architecture.</span>
+      </div>
+      <div class="f-right">
+        <a href="#hero" class="back-to-top">
+          <span>Back to Top</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="10" fill="#1b1a2e"/>
+  <circle cx="24" cy="24" r="16" fill="none" stroke="#d4af37" stroke-width="2"/>
+  <circle cx="24" cy="24" r="12" fill="none" stroke="#b49cff" stroke-width="1.2"/>
+  <text x="24" y="27" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#ffffff" text-anchor="middle">UOR</text>
+  <text x="24" y="44" font-family="system-ui, sans-serif" font-size="6" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="0.5">RAJASTHAN</text>
+</svg>

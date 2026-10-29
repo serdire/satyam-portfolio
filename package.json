@@ -1,0 +1,19 @@
+{
+  "name": "satyam-portfolio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Satyam Kulshreshtha — 2026 Developer Portfolio",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "stop": "powershell -NoProfile -Command \"$conn = Get-NetTCPConnection -LocalPort 3000 -ErrorAction SilentlyContinue; if ($conn) { Stop-Process -Id $conn.OwningProcess -Force; Write-Host 'Server on port 3000 stopped.' } else { Write-Host 'No server found running on port 3000.' }\""
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "full-stack",
+    "vanilla-js"
+  ],
+  "author": "Satyam Kulshreshtha",
+  "license": "MIT"
+}

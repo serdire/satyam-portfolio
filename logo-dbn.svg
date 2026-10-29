@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <rect width="160" height="160" rx="28" fill="#0d1117" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <!-- DBN Triple-Block Icon -->
+  <g transform="translate(17, 26)">
+    <!-- D: Deep Blue Block -->
+    <rect x="0" y="0" width="38" height="38" rx="8" fill="#1e40af"/>
+    <text x="19" y="27" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">D</text>
+    
+    <!-- B: Amber Gold Block -->
+    <rect x="44" y="0" width="38" height="38" rx="8" fill="#eab308"/>
+    <text x="63" y="27" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">B</text>
+    
+    <!-- N: Vibrant Emerald Green Block -->
+    <rect x="88" y="0" width="38" height="38" rx="8" fill="#10b981"/>
+    <text x="107" y="27" font-family="'Inter', -apple-system, sans-serif" font-size="22" font-weight="900" fill="#ffffff" text-anchor="middle">N</text>
+  </g>
+  <!-- Text Label -->
+  <text x="80" y="96" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#7fe3f5" letter-spacing="1.5" text-anchor="middle">DBN</text>
+  <text x="80" y="115" font-family="'Inter', -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#e2e8f0" letter-spacing="0.8" text-anchor="middle">MANAGEMENT SERVICES</text>
+  <text x="80" y="132" font-family="'Inter', -apple-system, sans-serif" font-size="7.5" font-weight="600" fill="#94a3b8" letter-spacing="0.5" text-anchor="middle">PVT LTD &#8226; GURUGRAM</text>
+</svg>
