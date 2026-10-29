@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initBurgerMenu() {
   const burgerBtn = document.getElementById('burger-btn');
   const drawer = document.getElementById('mobile-drawer');
+  const closeBtn = document.getElementById('drawer-close-btn');
   if (!burgerBtn || !drawer) return;
 
   function openDrawer() {
@@ -37,6 +38,8 @@ function initBurgerMenu() {
   burgerBtn.addEventListener('click', () => {
     drawer.classList.contains('open') ? closeDrawer() : openDrawer();
   });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
 
   drawer.addEventListener('click', (e) => {
     if (!e.target.closest('.mobile-drawer-inner')) closeDrawer();
