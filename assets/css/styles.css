@@ -1962,7 +1962,6 @@ img[src*="ghchart"] {
 
 /* ─── Mobile Drawer ─── */
 .mobile-drawer {
-  display: none;
   position: fixed;
   inset: 0;
   z-index: 200;
@@ -2083,9 +2082,6 @@ img[src*="ghchart"] {
 @media (max-width: 768px) {
   .burger-btn {
     display: flex;
-  }
-  .mobile-drawer {
-    display: block;
   }
   .site-header {
     height: 64px;
