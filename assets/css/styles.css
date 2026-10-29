@@ -1003,8 +1003,8 @@ html, body {
   font-family: var(--mono);
   font-size: 12px;
   padding: 4px 10px;
-  background: rgba(239, 233, 221, 0.05);
-  border: 1px solid var(--line);
+  background: rgba(239, 233, 221, 0.08);
+  border: 1px solid var(--line-strong, rgba(239, 233, 221, 0.18));
   border-radius: var(--radius-sm);
   color: var(--ink);
 }
@@ -1763,8 +1763,8 @@ img[src*="ghchart"] {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
-  background: rgba(239, 233, 221, 0.05);
-  border: 1px solid var(--line);
+  background: rgba(239, 233, 221, 0.08);
+  border: 1px solid var(--line-strong, rgba(239, 233, 221, 0.18));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1941,8 +1941,8 @@ img[src*="ghchart"] {
   gap: 5px;
   width: 36px;
   height: 36px;
-  background: rgba(239, 233, 221, 0.05);
-  border: 1px solid var(--line);
+  background: rgba(239, 233, 221, 0.08);
+  border: 1px solid var(--line-strong, rgba(239, 233, 221, 0.18));
   border-radius: var(--radius-sm);
   cursor: pointer;
   padding: 0;
@@ -1952,7 +1952,7 @@ img[src*="ghchart"] {
   display: block;
   width: 18px;
   height: 2px;
-  background: var(--muted);
+  background: var(--ink);
   border-radius: 2px;
   transition: transform 0.25s ease, opacity 0.2s ease, width 0.2s ease;
 }
