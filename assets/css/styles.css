@@ -1932,60 +1932,188 @@ img[src*="ghchart"] {
   }
 }
 
-@media (max-width: 768px) {
-  .site-header {
-    height: auto;
-    padding: 10px 0 8px;
-  }
+/* ─── Burger Button ─── */
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: rgba(239, 233, 221, 0.05);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+.burger-line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--muted);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease, width 0.2s ease;
+}
+.burger-btn[aria-expanded="true"] .line-1 { transform: translateY(7px) rotate(45deg); }
+.burger-btn[aria-expanded="true"] .line-2 { opacity: 0; width: 0; }
+.burger-btn[aria-expanded="true"] .line-3 { transform: translateY(-7px) rotate(-45deg); }
 
+/* ─── Mobile Drawer ─── */
+.mobile-drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.mobile-drawer.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.mobile-drawer-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(320px, 88vw);
+  height: 100%;
+  background: var(--bg-card);
+  border-left: 1px solid var(--line);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-drawer.open .mobile-drawer-inner {
+  transform: translateX(0);
+}
+.mobile-role-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--line);
+}
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.mob-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  color: var(--ink);
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+.mob-nav-item:hover {
+  border-color: var(--line);
+  background: rgba(239, 233, 221, 0.04);
+  color: #fff;
+}
+.mob-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--holo-accent);
+  min-width: 22px;
+}
+.mob-title {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+}
+.mob-arrow {
+  color: var(--faint);
+  font-size: 14px;
+  transition: transform 0.18s ease;
+}
+.mob-nav-item:hover .mob-arrow {
+  transform: translateX(4px);
+  color: var(--holo-accent);
+}
+.mobile-drawer-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px dashed var(--line);
+  padding-top: 20px;
+}
+.mobile-socials {
+  display: flex;
+  gap: 12px;
+}
+.mob-social-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  flex: 1;
+  justify-content: center;
+  transition: all 0.18s ease;
+}
+.mob-social-link:hover {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .burger-btn {
+    display: flex;
+  }
+  .mobile-drawer {
+    display: block;
+  }
+  .site-header {
+    height: 64px;
+    padding: 0;
+  }
   .nav-wrap {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px 12px;
+    gap: 12px;
   }
-
   .brand {
-    font-size: 14px;
+    flex: 1;
+    min-width: 0;
   }
-
   .status-badge {
     padding: 3px 8px;
     font-size: 11px;
     white-space: nowrap;
     flex-shrink: 0;
   }
-
   .status-badge .status-extra {
     display: none;
   }
-
   .nav-actions {
-    gap: 8px;
-  }
-
-  .nav-actions .icon-link {
     display: none;
   }
-
   .nav-links {
-    order: 3;
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 6px 0 2px;
-    gap: 16px;
-    border-top: 1px dashed var(--line);
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .nav-links .nav-item span {
-    display: inline;
-  }
-
-  .nav-links::-webkit-scrollbar {
     display: none;
   }
 

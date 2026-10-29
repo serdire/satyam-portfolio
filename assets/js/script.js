@@ -12,7 +12,44 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initCopyButtons();
   initGitHubLiveSync();
+  initBurgerMenu();
 });
+
+function initBurgerMenu() {
+  const burgerBtn = document.getElementById('burger-btn');
+  const drawer = document.getElementById('mobile-drawer');
+  if (!burgerBtn || !drawer) return;
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
+    burgerBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  burgerBtn.addEventListener('click', () => {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+
+  drawer.addEventListener('click', (e) => {
+    if (!e.target.closest('.mobile-drawer-inner')) closeDrawer();
+  });
+
+  drawer.querySelectorAll('.mob-nav-item').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+  });
+}
 
 /* --------------------------------------------------------------------------
    01. Interactive Ambient Background Canvas (Zero-dependency Constellation)
@@ -682,7 +719,7 @@ function initGitHubLiveSync() {
 
       chartImg.onerror = () => {
         // Fallback to local copy if offline or unreachable
-        chartImg.src = 'github-contributions.svg';
+        chartImg.src = 'assets/images/github-contributions.svg';
         if (syncStatus) {
           syncStatus.innerHTML = '● CACHED GRAPH';
           syncStatus.title = 'Offline mode: displaying cached contribution graph';
